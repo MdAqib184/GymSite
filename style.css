@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+* {
+    outline: none;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'popins',sans-serif;
+    box-sizing: border-box;
+    color: aliceblue;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #131b2b;
+}
+.navbar {
+    width: 100%;
+    position: fixed;
+    padding: 25px 100px;
+    z-index: 1111;
+    display: flex;
+    transition: 0.5s ease;
+    background-color: transparent;
+    justify-content: space-between;
+} 
+.navbar.sticky {
+    padding: 6px 60px;
+    background: #0c1518;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.navbar.sticky .logo {
+    font-size: 2em;
+    color: greenyellow;
+}
+.navbar.sticky ol li a{
+    font-size: 1.2em;
+    color: greenyellow;
+}
+.logo {
+    color: aliceblue;
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+ol {
+    display: flex;
+    margin: auto 0;
+}
+ol li {
+    margin-right: 12px;
+    list-style: none;
+}
+ol li a {
+    font-size: 1.6vw;
+    font-weight: 500;
+    color: antiquewhite;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+ol li:hover a {
+    color: red;
+}
+.view {
+    width: 100%;
+    min-height: 80vh;
+    position: relative;
+}
+.home {
+    display: flex;
+    min-height: 120vh;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0 0,100% 0, 100% 100%, 80% 95%, 0 100%);
+}
+.banner {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url(images/ban.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(90%);
+}
+.highlight {
+    z-index: 11;
+    display: inline-block;
+    position: relative;
+    width: 70%;
+}
+.highlight h3 {
+    font-size: 2.2vw;
+    padding: 4px 20px;
+    display: inline;
+    font-weight: 400;
+    border-left: 5px solid red;
+    text-transform: capitalize;
+}
+.highlight h1 {
+    font-size: 7vw;
+    text-align: center;
+}
+.highlight .tagline {
+    font-size: 1vw;
+    text-align: center;
+}
+.highlight .join {
+    background: red;
+    transition: 0.2 ease;
+    text-transform: uppercase;
+    color: white;
+    padding: 4px 20px;
+    margin-top: 1vw;
+    border: 1px solid #222;
+    text-align: center;
+    left: 45%;
+    position: absolute;
+    font-size: 1.3vw;
+    transform: translate(-30%);
+    border-radius: 40px;
+    font-weight: bolder;
+}
+.highlight .join:hover {
+    cursor: pointer;
+    letter-spacing: 1.4px;
+    background: greenyellow;
+    color: red;
+}
+.main {
+    font-size: 1.5vw;
+    text-align: center;
+}
+.main h2 {
+    margin-top: 90px;
+    padding-bottom: 1%;
+    font-size: 3.5vw;
+}
+.main h4 {
+    padding-bottom: 3%;
+}
+.content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.about .content {
+    flex-wrap: wrap;
+    
+}
+.about .content .cols {
+    position: relative;
+    padding: 30px 10px 30px 10px;
+    margin: 20px;
+    width: 590px;
+    height: 450px;
+    background: #222;
+    box-shadow: 0 10px 15px rgb(0, 0, 0, 0.5);
+    left: 6%;
+}
+.about .content .cols p{
+    font-size: 2vw;
+}
+.about .content .cols a {
+    background: rgb(61, 218, 69);
+    transition: 0.2 ease;
+    color: white;
+    padding: 1px 10px;
+    margin-top: 2.8vw;
+    position: absolute;
+    font-size: 1.15vw;  
+    border-radius: 20px;
+    font-weight: lighter;
+    text-decoration: none;
+    right: 89%;
+}
+.about .content .cols a:hover {
+    cursor: pointer;
+    color: black;
+    background-color: aliceblue;
+}
+.about .content .box {
+    position: relative;
+    width: 50%;
+    height: 70%;
+    overflow: hidden;
+    left: 15%;
+}
+.about .content .box img{
+    position: relative;
+    width: 50%;
+    height: 70%;
+    object-fit: cover;
+    transition: 0.2 ease-in;
+    filter: brightness(90%);
+}
+.about .content .box:hover img {
+    filter: brightness(70%);
+    transform: scale(1.08);
+    filter: grayscale(1);
+}
+.workout .content {
+    flex-wrap: wrap;
+}
+.workout .content .frame {
+    position: relative;
+    padding: 20px;
+    margin: 10px;
+    width: 350px;
+    background: #222;
+    box-shadow: 0 10px 15px rgb(0, 0, 0, 0.5);
+}
+.workout .content .frame .box {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.workout .content .frame .box img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2 ease-in;
+    filter: brightness(70%);
+}
+.workout .content .frame .box:hover img {
+    filter: brightness(70%);
+    transform: scale(1.08);
+    filter: grayscale(1);
+}
+.workout .content .frame .title {
+    color: chartreuse;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: bolder;
+}
+.trainer .content {
+    flex-wrap: wrap;
+}
+.trainer .content .frame {
+    position: relative;
+    padding: 20px;
+    margin: 10px;
+    width: 350px;
+    height: 380px;
+    background: #222;
+    box-shadow: 0 10px 15px rgb(0, 0, 0, 0.5);
+}
+.trainer .content .frame .box {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+.trainer .content .frame .box img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2 ease-in;
+    filter: brightness(70%);
+}
+.trainer .content .frame .box:hover img {
+    filter: brightness(70%);
+    transform: scale(1.08);
+    filter: grayscale(1);
+}
+.trainer .content .frame .headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+}
+.trainer .content .frame .headline .title {
+    color: chartreuse;
+    font-size: 1.5vw;
+    font-weight: bolder;
+}
+.trainer .content .frame .headline i {
+    height: 22px;
+    width: 22px;
+    text-align: center;
+    font-size: 12px;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 5px;
+    line-height: 22px;
+}
+.trainer .content .frame p {
+    font-size: 1.2vw;
+}
+.trainer .content .frame a {
+    background: chartreuse;
+    border: 1px solid #131b2b;
+    transition: 0.2 ease;
+    color: whitesmoke;
+    padding: 1px 10px;
+    margin-top: 1vw;
+    position: absolute;
+    font-size: 1.2vw;  
+    border-radius: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    
+}
+.trainer .content .frame a:hover {
+    cursor: pointer;
+    color: black;
+    background-color: aliceblue;
+}
+.diet .content {
+    flex-direction: column;
+} 
+.diet .content .rows {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    width: 100%;
+}
+.diet .content .rows:nth-child(odd) .a {
+    order: 2;
+}
+.diet .content .rows .cols {
+    position: relative;
+    width: 600px;
+    padding: 20px 50px;
+    font-size: 1.5vw;
+}
+.diet .content .rows .cols .head {
+    color: orange;
+    font-size: 2vw;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+.diet .content .rows:nth-child(odd) .cols .head {
+    color: #02a3ff;
+}
+.diet .content .rows .cols .boxe {
+    margin: 10px;
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+    height: 350px;
+    background: #d5cbcb;
+    box-shadow: 0 10px 15px rgb(0, 0, 0, 0.5);
+}
+.diet .content .rows .cols .boxe img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2 ease-in;
+    filter: brightness(90%);
+}
+.diet .content .rows .cols .boxe:hover img {
+    transform: scale(1.08);
+    filter: brightness(70%);
+}
+.contact .content {
+    min-height: 80vh;
+}
+.contact .content form {
+    margin: 80px 0;
+    position: relative;
+    padding: 20px;
+    height: 400px;
+    width: 400px;
+    background: #d5cbcb;
+    box-shadow: 0 10px 15px rgb(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.contact .content form input {
+    background: transparent;
+    font-size: 18px;
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    border: 1px solid grey;
+    margin: 15px 0;
+    padding: 0 10px;
+    color: #222;
+}
+.contact .content form textarea {
+    background: transparent;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid grey;
+    margin: 15px 0;
+    padding: 10px;
+    color: #222;
+}
+.contact .content form input:focus,
+.contact .content form textarea:focus {
+    border: 2px solid red;
+    transition: 0.1 ease;
+}
+.contact .content form .btn {
+    letter-spacing: 1px;
+    transition: 0.2 ease;
+    width: 100px;
+    display: inline-block;
+    color: red;
+    border-color: red;
+    cursor: pointer;
+}
+.contact .content form .btn:hover {
+    background: whitesmoke;
+}
+.contact .content .bgimg {
+    background: url(images/g10.png);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(70%);
+}
+.price .content {
+    flex-wrap: wrap;
+}
+.price .content .package {
+    position: relative;
+    padding: 20px;
+    margin: 10px;
+    width: 350px;
+    height: 350px;
+    background: #222;
+    box-shadow: 0 10px 15px rgb(0, 0, 0, 0.5);
+}
+.price .content .package h3 {
+    font-size: 2.2vw;
+    padding: 20px 0 40px;
+    color: chartreuse;
+}
+.price .content .package h4 {
+    font-size: 1.5vw;
+    color: whitesmoke;
+}
+.price .content .package p {
+    padding: 50px 0;
+    color: orange;
+    text-align: center;
+    font-size: 2.5vw;
+}
+.price .content .package .buy {
+    background-color: chartreuse;
+    transition: 0.2 ease;
+    text-transform: uppercase;
+    color: white;
+    padding: 4px 16px;
+    margin-top: 1vw;
+    border: 2px solid #131b2b;
+    text-align: center;
+    left: 41%;
+    position: absolute;
+    font-size: 1.3vw;
+    transform: translate(-30%);
+    border-radius: 40px;
+    font-weight: bolder;
+}
+.price .content .package .buy:hover {
+    cursor: pointer;
+    color: chartreuse;
+    background: whitesmoke;
+}
+.copyright {
+    color: wheat;
+    line-height: 40px;
+    text-align: center;
+    text-transform: capitalize;
+    height: 40px;
+    width: 100%;
+    font-size: 19px;
+    background: #222;
+}
+.copyright a {
+    font-weight: bold;
+    color: greenyellow;
+    text-decoration: none;
+}
+@media screen and (max-width: 900px) {
+    .navbar{
+        padding: 0 60px;
+    }
+    .navbar ol {
+        display: none;
+    }
+    .navbar ol.active {
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        position: fixed;
+        background: #222;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: calc(100%, -60px);
+    }
+    .navbar ol.active li{
+        margin: 8px;
+    }
+    .navbar ol.active li a {
+        font-size: 25px;
+    }
+    .navbar .toggle {
+        height: 35px;
+        width: 35px;
+        margin: auto 0;
+        cursor: pointer;
+        background: url(images/m.png);
+        background-size: 35px;
+        background-position: center;
+        filter: invert(1);
+    }
+    .navbar .toggle.active {
+        height: 32px;
+        width: 32px;
+        margin: auto 0;
+        cursor: pointer;
+        background: url(images/c1.png);
+        background-size: 32px;
+        background-position: center;
+        filter: invert(1);
+    }
+    .highlight h3{
+        font-size: 3vw;
+        padding: 5px 10px;
+        border-left: 3px solid red;
+    }
+    .highlight h1{
+        font-size: 16vw;
+    }
+    .highlight .join {
+        font-size: 1.8vw;
+        border: 1px solid red;
+    }
+    .main h2 {
+        font-size: 1.5em;
+    }
+    .main h4 {
+        font-size: 10px;
+    }
+    .about .content .cols {
+        padding: 15px 5px 20px 15px;
+        width: 300px;
+        height: 520px;
+    }
+    .about .content .cols p {
+        font-size: 1.9vw;
+        width: 200px;
+        height: 200px;
+    }
+    .about .content .cols a {
+        left: 5%;
+        width: 35px;
+        height: 13px;
+        font-size: 1.15vw;
+    }
+    .workout .content .frame {
+        padding: 18px;
+        width: 260px;
+    }
+    .trainer .content .frame {
+        padding: 15px 15px 40px 15px;
+        width: 300px;
+        margin: 10px 5px;
+        height: 300px;
+    }
+    .trainer .content .frame .box {
+        height: 200px;
+    }
+    .trainer .content .frame a {
+        border: 1.5px solid chartreuse;
+        padding: 3px 15px;
+    }
+}
