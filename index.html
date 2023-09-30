@@ -10,7 +10,7 @@
 <body>
     <div class="navbar">
         <a href="#" class="logo">STAY<span style="color: red;">FIT</span></a>
-        <div class="toggle" onclick="navtgl()"></div>
+        <div class="toggle" onclick="navtgl();"></div>
         <ol>
             <li><a href="#home" onclick="navtgl();">Home</a></li>
             <li><a href="#about" onclick="navtgl();">About</a></li>
@@ -109,7 +109,7 @@
                 <div class="box">
                     <img src="images/w3.jpg" alt="">
                 </div>
-                <div class="title">Leg Price</div>
+                <div class="title">Leg Press</div>
                 <p>Leg press is a resistance exercise where you push a weighted 
                 sled with your legs while seated, primarily targeting the quadriceps, 
                 hamstrings, and glutes.</p>
@@ -345,11 +345,13 @@
             <h2><span style="color: red;">C</span>ontact Us</h2>
         </div>
         <div class="content">  
-            <form>
-                <input type="text" placeholder="User">
-                <input type="email" placeholder="Email">
-                <textarea rows="4" placeholder="Feedback"></textarea>
-                <br><input type="submit" value="Send" class="btn">
+            <form id="feedback">
+                <div class="alert">Sent Successfully</div>
+                <input type="text" id="name" placeholder="User">
+                <input type="email" id="email" placeholder="Email">
+                <textarea rows="4" id="message"  placeholder="Feedback"></textarea>
+                <div class="error">Invalid user/email</div>
+                <br><button class="btn">Submit</button>
             </form>
             <div class="bgimg"></div>
         </div>
@@ -357,6 +359,14 @@
     <section class="copyright">
         &copy; copyright <a href="#">AsCoding</a> 2023 | All right rserved to AsCoding
     </section>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+    <script>
+        const tglbar = document.querySelector(".toggle");
+        const menu = document.querySelector("ol");
+        function navtgl(){
+            tglbar.classList.toggle("active");
+            menu.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
